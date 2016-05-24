@@ -3,7 +3,10 @@ frontendApp.directive('cleverImage', function() {
     templateUrl: '/src/html/directives/image.html',
     restrict: 'E',
     scope: {
-      url: '=url'
+      iurl: '=url'
     },
+    controller: function($scope, $sce) {
+      $scope.url = $sce.trustAs($sce.URL, $scope.iurl);
+    }
   };
 });

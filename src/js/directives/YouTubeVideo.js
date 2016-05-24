@@ -7,8 +7,8 @@ frontendApp.directive('cleverYoutube', function() {
       width: '=width',
       height: '=height'
     },
-    controller: function ($scope, $sce) {
-      $scope.url = $sce.trustAs('RESOURCE_URL', $scope.iurl);
+    controller: function($scope, $sce) {
+      $scope.url = $sce.trustAs($sce.RESOURCE_URL, $scope.iurl);
     }
   };
 });

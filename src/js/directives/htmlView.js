@@ -3,7 +3,10 @@ frontendApp.directive('cleverHtml', function() {
     templateUrl: '/src/html/directives/htmlView.html',
     restrict: 'E',
     scope: {
-      code: '=code'
+      icode: '=code'
     },
+    controller: function($scope, $sce) {
+          $scope.code = $sce.trustAs($sce.HTML, $scope.icode);
+    }
   };
 });
