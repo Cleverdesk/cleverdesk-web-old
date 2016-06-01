@@ -4,6 +4,7 @@ gem 'rack'
 
 gem 'puma'
 
+gem 'fishwife'
+
 gem 'foreman'
 
-gem 'daemons'
