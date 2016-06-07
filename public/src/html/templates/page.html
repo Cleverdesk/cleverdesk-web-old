@@ -1,1 +1,5 @@
-<div ng-bind-html="page"></div>
+<div ng-repeat="component in components" ng-switch on="component.name">
+        <clever-label ng-switch-when="Label" text="component.text"></clever-label>
+
+        <clever-label ng-switch-default text="'Component not supported yet :('"></clever-label>
+</div>
