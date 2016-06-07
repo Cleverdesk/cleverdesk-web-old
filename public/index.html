@@ -6,9 +6,13 @@
   <script src="bower_components/angular-animate/angular-animate.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
   <script src="src/js/main.js"></script>
-  <script src="src/js/directives/label.js"></script>
+  <script src="src/js/routes.js"></script>
+  <script src="src/js/controller/MainController.js"></script>
+  <script src="src/js/controller/PageController.js"></script>
+  <script src="src/js/services/communicator.js"></script>
+  <script src="src/js/services/parser.js"></script>
 </head>
-<body ng-controller="frontendCtrl">
-
+<body>
+    <div ng-view></div>
 </body>
 </html>
