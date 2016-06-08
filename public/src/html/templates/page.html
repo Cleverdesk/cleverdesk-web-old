@@ -1,5 +1,9 @@
 <div ng-repeat="component in components" ng-switch on="component.name">
         <clever-label ng-switch-when="Label" text="component.text"></clever-label>
 
+        <clever-youtube ng-switch-when="YouTubeVideo" url="component.url" width="420" height="315"></clever-youtube>
+
+        <clever-inputfield ng-switch-when="InputField" name="component.input_name" value="''" placeholder="component.placeholder" label="component.label"></clever-inputfield>
+
         <clever-label ng-switch-default text="'Component not supported yet :('"></clever-label>
 </div>
