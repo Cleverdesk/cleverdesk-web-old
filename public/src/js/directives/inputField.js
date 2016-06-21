@@ -7,6 +7,6 @@ frontendApp.directive('cleverInputfield', function() {
       value: '=value',
       label: '=label',
       placeholder: '=placeholder'
-    },
+    }
   };
 });

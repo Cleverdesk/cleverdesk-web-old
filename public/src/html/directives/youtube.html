@@ -1,1 +1,2 @@
-<iframe width="{{width}}" height="{{height}}" src="{{url}}" frameborder="0" allowfullscreen></iframe>
+<iframe ng-if="!urlError" width="{{width}}" height="{{height}}" src="{{url}}" frameborder="0" allowfullscreen></iframe>
+<p ng-if="urlError" style="color:red;">Error in Video URL</p>
