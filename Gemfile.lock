@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    filewatcher (0.5.3)
+      trollop (~> 2.0)
     fishwife (1.8.1-java)
       rack (>= 1.5.2, < 1.7)
       rjack-jetty (>= 9.2.11, < 9.4)
@@ -13,12 +15,14 @@ GEM
     rjack-jetty (9.3.8.0-java)
     rjack-slf4j (1.7.19.0-java)
     thor (0.19.1)
+    trollop (2.1.2)
 
 PLATFORMS
   java
   ruby
 
 DEPENDENCIES
+  filewatcher
   fishwife
   foreman
   puma

@@ -8,3 +8,4 @@ gem 'fishwife'
 
 gem 'foreman'
 
+gem 'filewatcher'
