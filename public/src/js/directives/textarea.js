@@ -1,6 +1,6 @@
-frontendApp.directive('cleverInputfield', function() {
+frontendApp.directive('cleverTextarea', function() {
   return {
-    templateUrl: '/src/html/directives/inputField.html',
+    templateUrl: '/src/html/directives/Textarea.html',
     restrict: 'E',
     scope: {
       name: '=name',
