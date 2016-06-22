@@ -1,10 +1,13 @@
-frontendApp.factory('communicator', function($http) {
+frontendApp.factory('communicator', function($http, auth) {
    return {
        getPages: function() {
            return new Promise(function(resolve, reject) {
                $http({
                    method: 'GET',
-                   url: '/backend/pages'
+                   url: '/backend/pages',
+                   headers: {
+                       'token': auth.getToken()
+                   }
                }).then(function successCallback(response) {
                    if(response.data.status == 200) {
                         resolve(response.data.body);
@@ -20,7 +23,10 @@ frontendApp.factory('communicator', function($http) {
            return new Promise(function(resolve, reject) {
                $http({
                    method: 'GET',
-                   url: '/backend/' + plugin + '/' + page
+                   url: '/backend/' + plugin + '/' + page,
+                   headers: {
+                       'token': auth.getToken()
+                   }
                }).then(function successCallback(response) {
                    if (response.data.status == 200) {
                        resolve(response.data.body);
