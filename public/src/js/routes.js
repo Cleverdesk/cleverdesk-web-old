@@ -1,8 +1,8 @@
 frontendApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'src/html/templates/main.html',
-            controller: 'MainController'
+            templateUrl: 'src/html/templates/page.html',
+            controller: 'HomeController'
         })
         .when('/:plugin/:page', {
             templateUrl: 'src/html/templates/page.html',
