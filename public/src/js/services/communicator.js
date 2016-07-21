@@ -2,9 +2,14 @@ frontendApp.factory('communicator', function($http, auth) {
    return {
        getPages: function() {
            return new Promise(function(resolve, reject) {
+               if (typeof host !== 'undefined') {
+                   var url = host + 'pages'
+               } else {
+                   var url = '/backend/pages';
+               }
                $http({
                    method: 'GET',
-                   url: '/backend/pages',
+                   url: url,
                    headers: {
                        'token': auth.getToken()
                    }
@@ -21,9 +26,14 @@ frontendApp.factory('communicator', function($http, auth) {
        },
        getPage: function(plugin, page) {
            return new Promise(function(resolve, reject) {
+               if (typeof host !== 'undefined') {
+                   var url = host + plugin + '/' + page;
+               } else {
+                   var url = '/backend/' + plugin + '/' + page;
+               }
                $http({
                    method: 'GET',
-                   url: '/backend/' + plugin + '/' + page,
+                   url: url,
                    headers: {
                        'token': auth.getToken()
                    }
